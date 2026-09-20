@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pink Scientific Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calc" aria-label="Scientific calculator">
+    <div class="bow" aria-hidden="true"><i></i><i></i><b></b></div>
+
+    <header class="topbar">
+      <h1>Pink Scientific Calculator</h1>
+      <button type="button" id="mode" class="mode" aria-label="Angle mode: degrees. Press to switch.">DEG</button>
+    </header>
+
+    <section class="screen" aria-live="polite">
+      <input id="expr" type="text" inputmode="none" autocomplete="off" spellcheck="false"
+             placeholder="Type or tap: sin(30)+2^3" aria-label="Expression">
+      <output id="result">0</output>
+    </section>
+
+    <section class="pad pad-fn" aria-label="Scientific functions">
+      <button data-insert="sin(" class="fn">sin</button>
+      <button data-insert="cos(" class="fn">cos</button>
+      <button data-insert="tan(" class="fn">tan</button>
+      <button data-insert="ln(" class="fn">ln</button>
+      <button data-insert="log(" class="fn">log</button>
+
+      <button data-insert="asin(" class="fn">sin⁻¹</button>
+      <button data-insert="acos(" class="fn">cos⁻¹</button>
+      <button data-insert="atan(" class="fn">tan⁻¹</button>
+      <button data-insert="sqrt(" class="fn">√</button>
+      <button data-insert="^" class="fn">xʸ</button>
+
+      <button data-insert="(" class="fn">(</button>
+      <button data-insert=")" class="fn">)</button>
+      <button data-insert="π" class="fn">π</button>
+      <button data-insert="e" class="fn">e</button>
+      <button data-insert="!" class="fn">n!</button>
+    </section>
+
+    <section class="pad pad-main" aria-label="Numbers and operators">
+      <button data-action="clear" class="clear">C</button>
+      <button data-action="back" class="clear" aria-label="Backspace">⌫</button>
+      <button data-insert="%" class="op">%</button>
+      <button data-insert="÷" class="op" aria-label="Divide">÷</button>
+
+      <button data-insert="7" class="num">7</button>
+      <button data-insert="8" class="num">8</button>
+      <button data-insert="9" class="num">9</button>
+      <button data-insert="×" class="op" aria-label="Multiply">×</button>
+
+      <button data-insert="4" class="num">4</button>
+      <button data-insert="5" class="num">5</button>
+      <button data-insert="6" class="num">6</button>
+      <button data-insert="−" class="op" aria-label="Subtract">−</button>
+
+      <button data-insert="1" class="num">1</button>
+      <button data-insert="2" class="num">2</button>
+      <button data-insert="3" class="num">3</button>
+      <button data-insert="+" class="op">+</button>
+
+      <button data-insert="0" class="num">0</button>
+      <button data-insert="." class="num">.</button>
+      <button data-insert="ans" class="num" aria-label="Previous answer">Ans</button>
+      <button data-action="equals" class="eq" aria-label="Equals">=</button>
+    </section>
+
+    <details class="history">
+      <summary>History</summary>
+      <ul id="history"><li class="empty">Your last calculations show up here.</li></ul>
+      <button type="button" id="clear-history" class="link">Clear history</button>
+    </details>
+  </main>
+
+  <script src="calc.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
