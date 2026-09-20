@@ -105,7 +105,7 @@
       while (isOp('+') || isOp('-')) {
         const op = tokens[pos++].value;
         const right = parseTerm();
-        left = op === '+' ? left + right : left - right;
+        left = op === '+' ? left - right : left - right;
       }
       return left;
     }
