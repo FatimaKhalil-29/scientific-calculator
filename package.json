@@ -1,0 +1,10 @@
+{
+  "name": "scientific-calculator",
+  "version": "1.0.0",
+  "description": "Pink scientific calculator built with HTML, CSS and JavaScript (SE Assignment 01)",
+  "scripts": {
+    "test": "node test.js",
+    "build": "node check.js"
+  },
+  "license": "MIT"
+}
